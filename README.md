@@ -1,1 +1,1 @@
-Impulse Biomedical Easy Squeazy app built using Angular and Ionic
+Impulse Biomedical Easy Squeezy app built using Angular and Ionic
