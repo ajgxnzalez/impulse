@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //issues
 // why doesn't property binding update --> because need to make sure it's linked to that variable not one of feeder variables
 //try using string interpolation for seconds
+//fix sprites
 
 @Component({
   selector: 'app-games',
@@ -25,6 +26,8 @@ export class GamesComponent implements OnInit {
   backgroundArray: string[];
   spriteArray: string[];
   activeSprite: string;
+  startBtn: string;
+  gameDiv: string;
   seconds: number = 10;
   btnResetDisplay: string;
 
@@ -37,12 +40,14 @@ export class GamesComponent implements OnInit {
     this.spriteArray = ['pigUrl', 'elephantUrl'];
     this.activeSprite = this.spriteArray[0];
     this.btnResetDisplay = 'none';
+    this.startBtn = 'inline-block';
+    this.gameDiv = 'none';
 
     this.score = 0;
     this.leftMin = 10;
     this.leftMax = 80;
     this.topMin = 1;
-    this.topMax = 85;
+    this.topMax = 80;
 
     this.backgroundArray = [
       'https://www.jing.fm/clipimg/full/86-862909_forest-background-big-tree-clip-art.png',
@@ -50,12 +55,38 @@ export class GamesComponent implements OnInit {
     ];
 
     this.arrayNumber = 0;
-
     this.backUrl = this.backgroundArray[this.arrayNumber];
-
     // this.seconds = this.doCountdown();
-    // this.seconds = 0;
+    // this.seconds = 10;
   }
+
+  startGame() {
+    this.startBtn = "none";
+    this.gameDiv = "block";
+  }
+
+//Doesn't seem to be changing the global variable
+  doCountdown() {
+    // this.seconds = 30;
+    let localSeconds = this.seconds;
+    let countdown: number = setInterval(function () {
+      localSeconds--;
+      this.seconds = localSeconds;
+      console.log(this.seconds);
+
+      if (this.seconds <= 0) {
+        clearInterval(countdown);
+        console.log("reached");
+        // this.seconds = 30;
+        // this.gameDiv = 'none';
+        // this.startBtn = 'inline-block';
+
+        //display game over + score
+        //make reset buttons visible
+        //make cat and other sprite invisible
+      } 
+    }, 1000);
+  };
 
   //setting the numbers for positioning robo cat button
   setLeftNumber() {
@@ -77,7 +108,6 @@ export class GamesComponent implements OnInit {
   addScore() {
     this.score++;
     this.setPosition();
-   
 
     //changes the background
     if (this.arrayNumber < this.backgroundArray.length - 1) {
@@ -88,11 +118,12 @@ export class GamesComponent implements OnInit {
       this.backUrl = this.backgroundArray[this.arrayNumber];
     }
   }
+
   //event bound to other sprite button
   decreaseScore() {
     this.score--;
     this.setPosition();
-    
+
     // change sprite if wrong one clicked
     if (this.activeSprite == this.spriteArray[0]) {
       this.activeSprite = this.spriteArray[1];
@@ -100,7 +131,6 @@ export class GamesComponent implements OnInit {
       this.activeSprite = this.spriteArray[0];
     }
   }
-  
 
   setPosition() {
     //position robo cat
@@ -127,40 +157,7 @@ export class GamesComponent implements OnInit {
     }
   }
 
-
- 
-
-  // //timer + what happens when timer runs out
-  // doCountdown () {
-  //   console.log(this.seconds);
-  //   let second = this.seconds;
-  //   let countdown = setInterval(function (second) {
-  //     if (second > 0) {
-  //       // this.seconds --;
-  //       second --;
-  //       console.log(second);
-  //       // console.log(this.seconds);
-  //       // this.seconds = second;
-  //     } else if (second <= 0) {
-  //           clearInterval(countdown);
-  //           console.log("help");
-  //           second = 1;
-  //           // return second;
-  //           this.btnResetDisplay = "block";
-  //           // btnReset.style.display = "block";
-  //           // roboCat.style.display = "none";
-  //           // otherSprite.style.display = "none";
-  //           // //all 3 are property binding
-  //       };
-  //   }, 1000);
-  //   return second;
-  //   }
-
-  // changeSprite() {}
-
-  ngOnInit(): void {
-    // this.doCountdown();
-  }
+  ngOnInit(): void {}
 }
 
 //only thing not working on game is timer
