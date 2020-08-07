@@ -6,6 +6,7 @@ import { AddDeviceComponent } from './add-device/add-device.component';
 import { PreOrderComponent } from './pre-order/pre-order.component';
 import { SyncDeviceComponent } from './sync-device/sync-device.component';
 import { GamesComponent } from './games/games.component';
+import { DevicesComponent } from './devices/devices.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'preOrder', component: PreOrderComponent},
   {path: 'syncDevice', component: SyncDeviceComponent},
   {path: 'game', component: GamesComponent},
+  {path: 'devices', component: DevicesComponent},
 ];
 
 @NgModule({

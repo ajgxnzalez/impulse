@@ -1,5 +1,39 @@
 <p>games works!</p>
 
+<body>
+    <input type="text" disabled="disabled" id = "timeBar" [value]="seconds">
+    <p>array num is: {{ arrayNumber }}</p>
+
+
+  
+    
+    <div id="background" [ngStyle]="{'background-image': 'url(' + backUrl + ')'}" >
+
+        <button (click)="addScore()" id="btnRobo" src="https://i0.wp.com/metro.co.uk/wp-content/uploads/2018/10/sei_36554009-212f.jpg?quality=90&strip=all&zoom=1&resize=644%2C483&ssl=1"  [ngStyle]="{'left.%': leftNum, 'top.%': topNum }">-</button>
+        <!-- [ngStyle]="{'left.%': leftNum }" [ngStyle]="{'top.%': topNum }" -->
+
+        
+        <button (click)="decreaseScore()" id="btnOtherSprite" [ngStyle]="{'left.%': spriteLeftNum, 'top.%': spriteTopNum }">s</button>
+
+    </div>
+    <input type="text" disabled="disabled" id = "score" [value]="'Your Score: ' + score">
+
+    <button id="btnReset" [ngStyle]="{'display': btnResetDisplay}">Reset</button>
+    <!-- style="display: none;" -->
+
+
+    <h3>Find Robo-Cat!</h3>
+    <!-- might need to make it clearer that clicking on elephant or pig loses points -->
+
+    <p>Navigation Icons</p>
+   
+    
+    <script src="game.ts" async defer></script>
+</body>
+
 <a [routerLink]="['../login']">Back to login</a>
 <br>
-<a [routerLink]="['../addDevice']">Sync a device</a>
+<a [routerLink]="['../devices']">Go to devices</a>
+
+
+

@@ -9,6 +9,7 @@ import { AddDeviceComponent } from './add-device/add-device.component';
 import { PreOrderComponent } from './pre-order/pre-order.component';
 import { SyncDeviceComponent } from './sync-device/sync-device.component';
 import { GamesComponent } from './games/games.component';
+import { DevicesComponent } from './devices/devices.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GamesComponent } from './games/games.component';
     AddDeviceComponent,
     PreOrderComponent,
     SyncDeviceComponent,
-    GamesComponent
+    GamesComponent,
+    DevicesComponent
   ],
   imports: [
     BrowserModule,
