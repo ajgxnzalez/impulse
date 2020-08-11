@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'game',
     loadChildren: () => import('./game/game.module').then( m => m.GamePageModule)
   },
+  {
+    path: 'dosage-tracking',
+    loadChildren: () => import('./dosage-tracking/dosage-tracking.module').then( m => m.DosageTrackingPageModule)
+  },
 ];
 
 @NgModule({
