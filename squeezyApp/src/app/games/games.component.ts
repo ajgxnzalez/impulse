@@ -84,7 +84,7 @@ export class GamesComponent implements OnInit {
         //display game over + score
         //make reset buttons visible
         //make cat and other sprite invisible
-      } 
+      }
     }, 1000);
   };
 
