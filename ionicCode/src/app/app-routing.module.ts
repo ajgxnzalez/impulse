@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'bluetoothlearnlink',
     loadChildren: () => import('./bluetoothlearnlink/bluetoothlearnlink.module').then( m => m.BluetoothlearnlinkPageModule)
   },
+  {
+    path: 'orderplaced',
+    loadChildren: () => import('./orderplaced/orderplaced.module').then( m => m.OrderplacedPageModule)
+  },
 ];
 
 @NgModule({

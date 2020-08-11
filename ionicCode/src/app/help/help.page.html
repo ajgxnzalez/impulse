@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button color="warning" text="" defaultHref="/Home"></ion-back-button>
+      <ion-back-button color="warning" text="" router-direction="back" defaultHref="/devices"></ion-back-button>
     </ion-buttons>
     <ion-title></ion-title>
     <div class="ion-margin-horizontal ion-text-right">
@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-text-center margin"><ion-text><h3>How to Use Your Inhaler <ion-icon name="help-circle-outline"></ion-icon></h3></ion-text></div>
+  <div class="ion-text-center ion-margin-bottom"><ion-text><h3>How to Use Your Inhaler <ion-icon name="help-circle-outline"></ion-icon></h3></ion-text></div>
   <!-- this is a placeholder video, replace the src when new video becomes available -->
   <video width="90%" class="ion-margin" controls>
     <source src="assets\promovid.mp4" type="video/mp4">
@@ -26,17 +26,17 @@
   <div class= "ion-text-center"> <ion-text>VIDEO TITLE</ion-text> </div>
 
   <ion-fab vertical="bottom" horizontal="start" id="leftmenu" slot="fixed" >
-    <ion-fab-button size="small">
+    <ion-fab-button size="small" href="\game">
       <ion-icon name="game-controller-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>  
   <ion-fab vertical="bottom" horizontal="center" slot="fixed" id="cmenu">
-    <ion-fab-button>
+    <ion-fab-button href="\devices">
       <ion-icon name="grid-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>  
   <ion-fab vertical="bottom" horizontal="end" id="rightmenu" slot="fixed" >
-    <ion-fab-button size="small">
+    <ion-fab-button size="small" href="\login">
       <ion-icon name="log-out-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>  
