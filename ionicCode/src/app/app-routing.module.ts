@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'forgotsent',
     loadChildren: () => import('./forgotsent/forgotsent.module').then( m => m.ForgotsentPageModule)
   },
+  {
+    path: 'game',
+    loadChildren: () => import('./game/game.module').then( m => m.GamePageModule)
+  },
 ];
 
 @NgModule({
