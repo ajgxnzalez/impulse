@@ -1,15 +1,43 @@
 <ion-header>
   <ion-toolbar>
     <ion-title></ion-title>
+    <div class="ion-margin-horizontal ion-text-right">
+      <img width="8%" src="assets\bluelogocropped.png"/>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-button [ngStyle]="{'display': btnScoreDisplay}" id="topmargin" expand="block"><p>Well Done! You scored {{ score }} points!</p></ion-button>
+
+<div class="ion-text-center ion-margin-vertical">
+    <ion-button id="startBtn" (click)="doCountdown(); startGame()" [ngStyle]="{'display': startBtn}"> {{ startBtnMessage }}</ion-button>
+</div>
+
+  <div [ngStyle]="{'display': gameDiv}">
   <div class="ion-text-center">
-    <ion-button id="topmargin" expand="block">Insert Timer Here</ion-button>
-  <div width="80%" height="500px" id="placeholder"> placeholder </div>
-    <ion-button id="topmargin" expand="block">Find Robo-cat!</ion-button>
-  </div>
+    <ion-button id="topmargin2" expand="block">Find Robo-cat!</ion-button>
+  </div> 
+  <ion-button id="topmargin2" expand="block"><input type="text" disabled="disabled" id="timeBar" [value]="seconds"></ion-button>
+
+
+    <div id="background" [ngStyle]="{'background-image': 'url(' + backUrl + ')'}">
+
+        <button (click)="addScore()" id="btnRobo" [ngStyle]="{'left.%': leftNum, 'top.%': topNum }"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/5566/cat-clipart-md.png" height="15px"></button>
+
+
+        <button (click)="decreaseScore()" id="btnOtherSprite"
+            [ngStyle]="{'left.%': spriteLeftNum, 'top.%': spriteTopNum }"><img src="{{ activeSprite }}" height = "15px"></button>
+
+    </div>
+    <ion-button id="topmargin" expand="block"><input type="text" disabled="disabled" id="score" [value]="'Your Score: ' + score"></ion-button>
+
+    <button id="btnReset" (click)="startGame()" [ngStyle]="{'display': btnResetDisplay}">Reset</button>
+
+
+</div>
+
+<script src="game.ts" async defer></script>
 
     <ion-fab vertical="bottom" horizontal="start" id="leftmenu" slot="fixed" >
       <ion-fab-button size="small">
