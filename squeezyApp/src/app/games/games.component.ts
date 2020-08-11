@@ -67,14 +67,11 @@ export class GamesComponent implements OnInit {
     this.score = 0;
   }
 
-//Doesn't seem to be changing the global variable
   doCountdown() {
-    // this.seconds = 30;
     let localSeconds = this.seconds;
     let countdown: number = setInterval( () => {
       localSeconds--;
       this.seconds = localSeconds;
-      console.log(this.seconds);
 
       if (this.seconds <= 0) {
         clearInterval(countdown);
@@ -84,7 +81,7 @@ export class GamesComponent implements OnInit {
         this.startBtn = 'inline-block';
         this.startBtnMessage = 'Reset Game';
         this.btnScoreDisplay = 'inline-block';
-        //make cat and other sprite invisible
+    
       }
     }, 1000);
   };
