@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Devices</ion-title>
     <ion-buttons slot="start">
       <ion-back-button color="warning" text="" defaultHref="/Home"></ion-back-button>
     </ion-buttons>
+    <ion-title></ion-title>
     <div class="ion-margin-horizontal ion-text-right">
       <img width="8%" src="assets\bluelogocropped.png"/>
     </div>
@@ -11,27 +11,19 @@
 </ion-header>
 
 <ion-content>
-  <div class="margin2"></div>
-  <ion-card id="device">
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="4"><img src="assets\catinhaler.png"></ion-col>
-          <ion-col class="margin" size="6">Device Name</ion-col>
-          <ion-col class="margin2" size="2"><ion-button color="danger"><ion-icon name="help-circle-outline"></ion-icon></ion-button></ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
-  <ion-card id="device">
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col class="ion-text-center">+ Add Device</ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+  <div class="ion-text-center margin"><ion-text><h3>How to Use Your Inhaler <ion-icon name="help-circle-outline"></ion-icon></h3></ion-text></div>
+  <!-- this is a placeholder video, replace the src when new video becomes available -->
+  <video width="90%" class="ion-margin" controls>
+    <source src="assets\promovid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+  <div class= "ion-text-center"> <ion-text>VIDEO TITLE</ion-text> </div>
+ 
+  <video width="90%" class="ion-margin" controls>
+    <source src="assets\promovid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+  <div class= "ion-text-center"> <ion-text>VIDEO TITLE</ion-text> </div>
 
   <ion-fab vertical="bottom" horizontal="start" id="leftmenu" slot="fixed" >
     <ion-fab-button size="small">

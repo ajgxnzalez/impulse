@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'devices',
     loadChildren: () => import('./devices/devices.module').then( m => m.DevicesPageModule)
   },
+  {
+    path: 'help',
+    loadChildren: () => import('./help/help.module').then( m => m.HelpPageModule)
+  },
 ];
 
 @NgModule({
