@@ -1,9 +1,6 @@
 <ion-header>
   <ion-toolbar>
     <ion-title></ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button color="warning" text="" defaultHref="/Home"></ion-back-button>
-    </ion-buttons>
     <div class="ion-margin-horizontal ion-text-right">
       <img width="8%" src="assets\bluelogocropped.png"/>
     </div>
@@ -15,22 +12,21 @@
     <h1>Device Synced!</h1>
     <img class="margin3" width="40%" src="assets\catinhaler2.png">
     <br>
-    <ion-button>Continue</ion-button>
+    <ion-button><strong>Continue</strong></ion-button>
   </div>
-
   <ion-fab vertical="bottom" horizontal="start" id="leftmenu" slot="fixed" >
-    <ion-fab-button size="small">
+    <ion-fab-button size="small" href="\game">
       <ion-icon name="game-controller-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>  
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed" id="cmenu">
-    <ion-fab-button>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" id="cmenu" >
+    <ion-fab-button href="\devices">
       <ion-icon name="grid-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>  
   <ion-fab vertical="bottom" horizontal="end" id="rightmenu" slot="fixed" >
-    <ion-fab-button size="small">
+    <ion-fab-button size="small" href="\login">
       <ion-icon name="log-out-outline"></ion-icon>
     </ion-fab-button>
-  </ion-fab>    
+  </ion-fab>     
 </ion-content>
