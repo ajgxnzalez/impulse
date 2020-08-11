@@ -8,10 +8,6 @@
   ion-button {
     --border-radius:3px;
   } 
-  
-  .swiper-slide img {
-    max-width: 70%;
-  }
   ion-chip{
     --background:#e4f7ff;
   }
@@ -19,6 +15,12 @@
     width: 40px;
     height: 40px;
   }
+  ion-col{
+    color:black;
+}
+.swiper-slide img {
+  max-width: 70%;
+}
   #topmargin{
     margin: 8% 5% 0% 5%;
   }
@@ -102,9 +104,9 @@
   --ion-color-warning-tint: #ffca22;
 
   /** danger **/
-  --ion-color-danger: #eb445a;
+  --ion-color-danger: #e4f7ff;
   --ion-color-danger-rgb: 235, 68, 90;
-  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast: black;
   --ion-color-danger-contrast-rgb: 255, 255, 255;
   --ion-color-danger-shade: #cf3c4f;
   --ion-color-danger-tint: #ed576b;

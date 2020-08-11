@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Devices</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="warning" text="" defaultHref="/Home"></ion-back-button>
+    </ion-buttons>
+    <div class="ion-margin-horizontal ion-text-right">
+      <img width="8%" src="assets\bluelogocropped.png"/>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="margin2"></div>
+  <ion-card id="device">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4"><img src="assets\catinhaler.png"></ion-col>
+          <ion-col class="margin" size="6">Device Name</ion-col>
+          <ion-col class="margin2" size="2"><ion-button color="danger"><ion-icon name="help-circle-outline"></ion-icon></ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card id="device">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-text-center">+ Add Device</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="start" id="leftmenu">
+    <ion-fab-button size="small">
+      <ion-icon name="game-controller-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>  
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" id="cmenu">
+    <ion-fab-button>
+      <ion-icon name="grid-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>  
+  <ion-fab vertical="bottom" horizontal="end" id="rightmenu">
+    <ion-fab-button size="small">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>  
+</ion-content>
