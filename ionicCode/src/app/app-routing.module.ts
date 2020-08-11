@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'bluetoothparing',
     loadChildren: () => import('./bluetoothparing/bluetoothparing.module').then( m => m.BluetoothparingPageModule)
   },
+  {
+    path: 'bluetoothconnected',
+    loadChildren: () => import('./bluetoothconnected/bluetoothconnected.module').then( m => m.BluetoothconnectedPageModule)
+  },
 ];
 
 @NgModule({
