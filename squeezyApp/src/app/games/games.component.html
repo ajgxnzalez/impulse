@@ -11,11 +11,11 @@
 
     <div id="background" [ngStyle]="{'background-image': 'url(' + backUrl + ')'}">
 
-        <button (click)="addScore()" id="btnRobo" [ngStyle]="{'left.%': leftNum, 'top.%': topNum }"><img src="{{ activeSprite }}" height = "10px"></button>
+        <button (click)="addScore()" id="btnRobo" [ngStyle]="{'left.%': leftNum, 'top.%': topNum }"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/5566/cat-clipart-md.png" height="15px"></button>
 
 
         <button (click)="decreaseScore()" id="btnOtherSprite"
-            [ngStyle]="{'left.%': spriteLeftNum, 'top.%': spriteTopNum }">s</button>
+            [ngStyle]="{'left.%': spriteLeftNum, 'top.%': spriteTopNum }"><img src="{{ activeSprite }}" height = "15px"></button>
 
     </div>
     <input type="text" disabled="disabled" id="score" [value]="'Your Score: ' + score">

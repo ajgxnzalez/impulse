@@ -1,0 +1,66 @@
+
+<ion-content>
+  <ion-app>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button color="warning" text="" defaultHref="/Home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Pre-Order</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content fullscreen>
+      <div class="ion-text-center ion-margin">
+        <img width="25%" src="assets\bluelogo.png"/>
+      </div>
+  
+      <form onsubmit="processForm(event)">
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+          <ion-item>
+            <ion-label position="floating">First Name <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Last Name <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+          </ion-item>
+          
+         
+          <ion-item>
+            <ion-label position="floating">Email Adress <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="floating">Country <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="floating">State or Province <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="floating">Address<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Zip ot Postal Code<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <div class="ion-padding ion-text-center">
+          <ion-button type="submit" class="ion-no-margin">Place Order</ion-button>
+        </div>
+      </form>
+
+    </ion-content>
+    <ion-alert-controller></ion-alert-controller>
+  </ion-app>
+
+</ion-content>

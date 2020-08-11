@@ -23,7 +23,7 @@ export class GamesComponent implements OnInit {
   activeSprite: string;
   startBtn: string;
   gameDiv: string;
-  seconds: number = 5;
+  seconds: number = 30;
   btnResetDisplay: string;
   btnScoreDisplay: string;
   startBtnMessage: string;
@@ -33,7 +33,9 @@ export class GamesComponent implements OnInit {
     this.topNum = this.setTopNumber();
     this.spriteLeftNum;
     this.spriteTopNum;
-    this.spriteArray = ['https://image.freepik.com/free-vector/cute-animal-face-cartoon_24640-45565.jpg', 'https://image.freepik.com/free-vector/blue-wavy-forms-transparent-background_1035-6744.jpg'];
+    this.spriteArray = [
+      'https://www.pngfind.com/pngs/m/524-5247358_free-stock-photo-cartoon-elephant-transparent-background-hd.png',
+     'https://i.pinimg.com/564x/63/06/c0/6306c0e868d30bac5a325b076c1320fa.jpg'];
     this.activeSprite = this.spriteArray[0];
     this.btnResetDisplay = 'none';
     this.btnScoreDisplay = 'none';
@@ -49,6 +51,8 @@ export class GamesComponent implements OnInit {
     this.backgroundArray = [
       'https://www.jing.fm/clipimg/full/86-862909_forest-background-big-tree-clip-art.png',
       'https://www.setaswall.com/wp-content/uploads/2017/06/Cartoon-Background-2560-x-1600-768x480.jpg',
+      'https://images.all-free-download.com/images/graphiclarge/cartoon_city_landscape_vector_522297.jpg',
+      'https://images.all-free-download.com/images/graphicthumb/supermarket_showcase_and_food_vector_set_577387.jpg',
     ];
 
     this.arrayNumber = 0;
@@ -81,7 +85,7 @@ export class GamesComponent implements OnInit {
         this.startBtnMessage = 'Reset Game';
         this.btnScoreDisplay = 'inline-block';
         //make cat and other sprite invisible
-      } 
+      }
     }, 1000);
   };
 

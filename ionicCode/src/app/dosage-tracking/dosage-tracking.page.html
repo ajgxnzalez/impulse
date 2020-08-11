@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Device Name</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="warning" text="" defaultHref="/Home"></ion-back-button>
+    </ion-buttons>
+    <div class="ion-margin-horizontal ion-text-right">
+      <img width="8%" src="assets\bluelogocropped.png"/>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="assets\catinhaler.png">
+  <div class="ion-text-center">
+  <p id="number">30<span id="sprays"> Sprays Left</span></p>
+  </div>
+  <ion-fab vertical="bottom" horizontal="start" id="leftmenu">
+    <ion-fab-button size="small">
+      <ion-icon name="game-controller-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>  
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" id="cmenu">
+    <ion-fab-button>
+      <ion-icon name="grid-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>  
+  <ion-fab vertical="bottom" horizontal="end" id="rightmenu">
+    <ion-fab-button size="small">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>  
+</ion-content>
