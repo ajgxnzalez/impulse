@@ -1,6 +1,7 @@
 
+<p [ngStyle]="{'display': btnScoreDisplay}">Well Done! You scored {{ score }} points!</p>
 <br>
-<button (click)="doCountdown(); startGame()" [ngStyle]="{'display': startBtn}">Start Game</button>
+<button (click)="doCountdown(); startGame()" [ngStyle]="{'display': startBtn}"> {{ startBtnMessage }}</button>
 <br>
 <div [ngStyle]="{'display': gameDiv}">
 
@@ -10,10 +11,7 @@
 
     <div id="background" [ngStyle]="{'background-image': 'url(' + backUrl + ')'}">
 
-        <button (click)="addScore()" id="btnRobo"
-            src="https://i0.wp.com/metro.co.uk/wp-content/uploads/2018/10/sei_36554009-212f.jpg?quality=90&strip=all&zoom=1&resize=644%2C483&ssl=1"
-            [ngStyle]="{'left.%': leftNum, 'top.%': topNum }">-</button>
-        <!-- [ngStyle]="{'left.%': leftNum }" [ngStyle]="{'top.%': topNum }" -->
+        <button (click)="addScore()" id="btnRobo" [ngStyle]="{'left.%': leftNum, 'top.%': topNum }"><img src="{{ activeSprite }}" height = "10px"></button>
 
 
         <button (click)="decreaseScore()" id="btnOtherSprite"

@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//issues
-// why doesn't property binding update --> because need to make sure it's linked to that variable not one of feeder variables
-//try using string interpolation for seconds
-//fix sprites
 
 @Component({
   selector: 'app-games',
@@ -21,33 +17,34 @@ export class GamesComponent implements OnInit {
   topNum: number;
   spriteLeftNum: number;
   spriteTopNum: number;
-  // leftResult: number;
   arrayNumber: number;
   backgroundArray: string[];
   spriteArray: string[];
   activeSprite: string;
   startBtn: string;
   gameDiv: string;
-  seconds: number = 10;
+  seconds: number = 5;
   btnResetDisplay: string;
+  btnScoreDisplay: string;
+  startBtnMessage: string;
 
   constructor() {
     this.leftNum = this.setLeftNumber();
     this.topNum = this.setTopNumber();
     this.spriteLeftNum;
     this.spriteTopNum;
-    // this.leftResult = this.leftNum - this.spriteLeftNum;
-    this.spriteArray = ['pigUrl', 'elephantUrl'];
+    this.spriteArray = ['https://image.freepik.com/free-vector/cute-animal-face-cartoon_24640-45565.jpg', 'https://image.freepik.com/free-vector/blue-wavy-forms-transparent-background_1035-6744.jpg'];
     this.activeSprite = this.spriteArray[0];
     this.btnResetDisplay = 'none';
+    this.btnScoreDisplay = 'none';
     this.startBtn = 'inline-block';
     this.gameDiv = 'none';
 
     this.score = 0;
     this.leftMin = 10;
-    this.leftMax = 80;
+    this.leftMax = 70;
     this.topMin = 1;
-    this.topMax = 80;
+    this.topMax = 65;
 
     this.backgroundArray = [
       'https://www.jing.fm/clipimg/full/86-862909_forest-background-big-tree-clip-art.png',
@@ -56,20 +53,21 @@ export class GamesComponent implements OnInit {
 
     this.arrayNumber = 0;
     this.backUrl = this.backgroundArray[this.arrayNumber];
-    // this.seconds = this.doCountdown();
-    // this.seconds = 10;
+    this.startBtnMessage = "Start Game";
   }
 
   startGame() {
     this.startBtn = "none";
     this.gameDiv = "block";
+    this.btnScoreDisplay ="none";
+    this.score = 0;
   }
 
 //Doesn't seem to be changing the global variable
   doCountdown() {
     // this.seconds = 30;
     let localSeconds = this.seconds;
-    let countdown: number = setInterval(function () {
+    let countdown: number = setInterval( () => {
       localSeconds--;
       this.seconds = localSeconds;
       console.log(this.seconds);
@@ -77,12 +75,11 @@ export class GamesComponent implements OnInit {
       if (this.seconds <= 0) {
         clearInterval(countdown);
         console.log("reached");
-        // this.seconds = 30;
-        // this.gameDiv = 'none';
-        // this.startBtn = 'inline-block';
-
-        //display game over + score
-        //make reset buttons visible
+        this.seconds = 30;
+        this.gameDiv = 'none';
+        this.startBtn = 'inline-block';
+        this.startBtnMessage = 'Reset Game';
+        this.btnScoreDisplay = 'inline-block';
         //make cat and other sprite invisible
       } 
     }, 1000);
@@ -108,6 +105,13 @@ export class GamesComponent implements OnInit {
   addScore() {
     this.score++;
     this.setPosition();
+
+    if (this.activeSprite == this.spriteArray[0]) {
+      this.activeSprite = this.spriteArray[1];
+    } else {
+      this.activeSprite = this.spriteArray[0];
+    }
+  
 
     //changes the background
     if (this.arrayNumber < this.backgroundArray.length - 1) {
@@ -144,7 +148,6 @@ export class GamesComponent implements OnInit {
     if (leftNum - 20 > this.leftMin && topNum - 20 > this.topMin) {
       this.spriteLeftNum = leftNum - 20;
       this.spriteTopNum = topNum - 20;
-      // console.log(this.spriteLeftNum);
     } else if (leftNum - 20 > this.leftMin && topNum - 20 < this.topMin) {
       this.spriteLeftNum = leftNum - 20;
       this.spriteTopNum = topNum + 20;
@@ -152,15 +155,13 @@ export class GamesComponent implements OnInit {
       this.spriteLeftNum = leftNum + 20;
       this.spriteTopNum = topNum - 20;
     } else {
-      // console.log(leftNum);
-      // console.log(topNum);
     }
   }
 
   ngOnInit(): void {}
 }
 
-//only thing not working on game is timer
+
 
 //need icons or robocat, pig & elephant
 
