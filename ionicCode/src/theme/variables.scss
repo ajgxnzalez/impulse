@@ -16,8 +16,11 @@
     height: 40px;
   }
   ion-col{
-    color:black;
-}
+      color:black;
+  }
+  ion-fab{
+    margin-bottom: 10%;
+  }
 .swiper-slide img {
   max-width: 70%;
 }
@@ -32,7 +35,10 @@
 }
 
   #topmargin{
-    margin: 8% 5% 0% 5%;
+    margin: 5% 5% 0% 5%;
+  }
+  #topmargin2{
+    margin: 0% 5% 0% 5%;
   }
   #topmargin2{
     margin: 0% 5% 0% 5%;
