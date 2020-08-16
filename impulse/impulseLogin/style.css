@@ -1,0 +1,53 @@
+header{
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+    background: white;
+    box-sizing: border-box;
+}
+header a{
+    margin-left: 10px;
+    border-bottom: 2px;
+    padding: 4px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+header a:hover{
+    color: blue;
+}
+.modal{
+    width: 300px;
+    padding: 30px;
+    margin: 100px auto;
+    border-radius: 10px;
+    background: white;
+    text-align:center;
+
+}
+.auth{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #fafafa;
+    display: none;
+    z-index: 1;
+}
+.auth.open{
+    display: block;
+}
+.auth a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.auth .modal{
+    display: none;
+}
+.auth .modal.active{
+    display: block;
+}
+.devicePage{
+    display: none;
+}
+.devicePage.active{
+    display: block;
+}
